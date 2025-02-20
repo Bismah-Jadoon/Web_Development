@@ -1,0 +1,40 @@
+import logo from './logo.svg';
+import './App.css';
+import Navbar from './Navbar';
+import Textform from './Textform';
+import { useState } from 'react';
+
+
+function App() {
+  
+  const[Name,newName] = useState('');
+  const [fullName,setFullName] = useState();
+  
+  const inputEvent = (event) =>{
+    console.log(event.target.value);
+    newName(event.target.value);
+  }
+
+  const onSubmit = (event) =>{
+    event.preventDefault();
+    setFullName(Name);
+  }
+return(
+  <>
+  <form onSubmit={onSubmit}>       //it refresh page 
+  <div>
+    <h1> Hello {fullName} </h1>
+   
+    <input type='text' placeholder='Enter Your Name' 
+     onChange={inputEvent} Value={Name}/>
+
+    <button class='btn' type='submit'  > Submit Me 👍 </button>
+  </div>
+  </form>
+  </>
+)
+
+}
+
+export default App;
+export default App;

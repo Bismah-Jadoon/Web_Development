@@ -1,0 +1,30 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+  // Spread Operator
+
+// const fullName = ['Bismah','Jadoon'];
+
+// const biodata = [1,...fullName, 26, "female"]; //(...) is spread operator
+
+
+
+// console.log(fullName);
+// console.log(biodata);
+
+const fullName = {
+   fname: "Bismah",
+   lname: "Jadoon",
+}
+
+const Biodata = {
+  id : 1,
+  ...fullName,
+  gender: "female",
+}
+
+console.log(fullName);
+console.log(Biodata);
